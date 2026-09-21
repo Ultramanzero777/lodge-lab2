@@ -1,0 +1,133 @@
+﻿@/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2
+   Case Problem 4
+   
+   Great Lakescape Lodge Style Sheet
+   Author: Xiyuan Chen
+   Date:2026 9 21
+   
+   Filename: lake_styles.css
+
+*/
+
+
+
+
+@charset "UTF-8";
+
+/* Import web font resources */
+@font-face {
+    font-family: 'CacChampagne';
+    src: url('cac_champagne.woff') format('woff'),
+         url('cac_champagne.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'DobkinPlain';
+    src: url('DobkinPlain.woff') format('woff'),
+         url('DobkinPlain.ttf') format('truetype');
+}
+
+/* Global body style, color name + hex value */
+body {
+    background-color: indigo;
+    color: #1a1a1a;
+}
+
+/* Header styling */
+header {
+    background-color: #602e63;
+}
+
+/* Left main content column */
+section#leftcol {
+    background-color: rgb(247, 235, 214);
+    padding: 14px;
+}
+
+/* Right sidebar column */
+section#rightcol {
+    background-color: #602e63;
+    color: white;
+    padding:14px;
+}
+
+/* Two aside boxes inside left column: Notes & Events */
+section#leftcol aside:nth-of-type(1) {
+    background-color: #f0c692;
+    padding:12px;
+    margin-top:10px;
+}
+section#leftcol aside:nth-of-type(2) {
+    background-color: #e4cf88;
+    padding:12px;
+    margin-top:10px;
+}
+
+/* Heading font assignments */
+h1 {
+    font-family: 'CacChampagne', serif;
+    font-size: 2.7rem;
+    color: #602e63;
+}
+h2 {
+    font-family: 'DobkinPlain', serif;
+    color: #602e63;
+}
+section#rightcol h2 {
+    color: #f7ebd6;
+}
+
+/* Pseudo‑element, generate content after h1 (task 3i) */
+h1::after {
+    content: " ★";
+    color:#b88628;
+}
+
+/* Pseudo‑classes for hyperlinks */
+a:link {
+    color:#602e63;
+}
+a:visited {
+    color:#7c4480;
+}
+a:hover {
+    background-color: rgba(96, 46, 99, 0.22);
+}
+section#rightcol a {
+    color:#fff;
+}
+section#rightcol a:hover {
+    background-color:rgba(255,255,255,0.25);
+}
+
+/* List marker customization 3f */
+ul li::marker {
+    color:#602e63;
+}
+section#rightcol ul li::marker {
+    color:#f7ebd6;
+}
+
+/* Descendant & child selector example 3e */
+#rightcol nav > ul {
+    margin: 0.4rem 0 1.2rem 0;
+}
+section#leftcol > p {
+    line-height: 1.6;
+    margin:0.7rem 0;
+}
+
+/* Margin & padding for blockquote 3h */
+blockquote {
+    margin:18px 8px;
+    padding:12px;
+    font-style: italic;
+}
+
+footer {
+    background-color:#602e63;
+    color:#f7ebd6;
+    text-align:center;
+    padding:10px 0;
+}
